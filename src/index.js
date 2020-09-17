@@ -12,9 +12,10 @@ const DEFAULT = {
 class FcComponent extends Component {
   // 解析入参
   handlerInputs(inputs) {
+
     const credentials = inputs.Credentials
     const properties = inputs.Properties
-    const state = inputs.State
+    const state = inputs.State || {}
     const args = inputs.Args
 
     const type = args.type;
@@ -46,7 +47,7 @@ class FcComponent extends Component {
     const projectName = inputs.Project.ProjectName
     const credentials = inputs.Credentials
     const properties = inputs.Properties
-    const state = inputs.State
+    const state = inputs.State || {}
     const args = inputs.Args
 
     const deployType = args.type ? args.type : 'all'
@@ -166,7 +167,7 @@ class FcComponent extends Component {
     const projectName = inputs.Project.ProjectName
     const credentials = inputs.Credentials
     const properties = inputs.Properties
-    const state = inputs.State
+    const state = inputs.State || {}
     const args = inputs.Args
 
     const removeType = args.type ? args.type : 'all'
